@@ -1,0 +1,120 @@
+.parent_landing
+{
+    min-height: 100%;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.head_para
+{
+    font-size: 1.17rem;
+    font-weight: 600;
+    color: rgb(152, 152, 152);
+    height: 90%;
+    /* background-color: green; */
+    margin-top: -21px;
+    margin-left: 6.5%;
+}
+.head_content
+{
+    font-size: 1.35rem;
+    font-weight: 600;
+    max-width: 600px;
+    color: rgb(104, 104, 104);
+    height: 90%;
+    /* background-color: green; */
+    margin-top: 4px;
+    margin-left: 6.5%;
+}
+.body_landing
+{
+    height: auto;
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: -10px;
+}
+.body_back_landing
+{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-bottom: 60px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.docex_details_landing
+{
+    font-size: 1.35rem;
+    font-weight: 600;
+    max-width: 470px;
+    color: rgb(119, 119, 119);
+    height: 90%;
+}
+.created_notes_back_div_landing
+{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+.created_notes_para
+{
+    font-size: 1.35rem;
+    font-weight: 600;
+    max-width: 550px;
+    color: rgb(119, 119, 119);
+    height: 90%;
+    /* background-color: green; */
+    margin-top: 4px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.created_notes_img
+{
+    height: 200px;
+    padding: 10px;
+    padding-bottom: 16px;
+    border-radius: 7px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-bottom: 30px;
+}
+.footer_back_div {
+    height: 60px;
+    width: 100%;
+    background-color: rgb(199, 199, 199);
+    margin-top: 5.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.takeme
+{
+    opacity: 0.5;
+    margin: 8px;
+}
+@media(max-width:1050px)
+{
+    .created_notes_img
+    {
+        height: 140px;
+    }
+    .body_landing
+    {
+        margin-bottom: 55px;
+    }
+}

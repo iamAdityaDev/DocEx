@@ -1,0 +1,27 @@
+.below_part_add_note
+{
+    height: auto;
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+}
+.created_head
+{
+    font-size: 2.3rem;
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    margin-left: 5.8%;
+    margin-top: 55px;
+}
+.container_notes_created
+{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 4.5%;
+    margin-right: 5%;
+    margin-top: -15px;
+}

@@ -1,0 +1,147 @@
+.logout_icon
+{
+    opacity: 0.9;
+    margin-right: 5px;
+    margin-left: -3px;
+}
+.logout_but
+{
+    cursor: pointer;
+    height: 37px;
+    width: 130px;
+    font-size: 1.1rem;
+    position: absolute;
+    top:47px;
+    right:18px;
+    border: none;
+    border-radius: 35px;
+    background-color: rgb(117, 117, 117);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logout_icon_two
+{
+    opacity: 0.9;
+    margin-left: 4px;
+}
+.logout_but_two
+{
+    opacity: 0;
+    cursor: pointer;
+    height: 37px;
+    width: 45px;
+    font-size: 1.1rem;
+    position: absolute;
+    top:47px;
+    right:18px;
+    border: none;
+    border-radius: 35px;
+    background-color: rgb(117, 117, 117);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parent_div_add_note
+{
+    height: auto;
+    width: 100%;
+    position: absolute;
+    top:-35px;
+    display: flex;
+    flex-direction: column;
+}
+.upper_div_add_note
+{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.content_adding_note
+{
+    height: auto;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.left_add_note_div
+{
+    height: auto;
+    width: auto;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.adding_note_head
+{
+    width: 230px;
+    font-size: 2.1rem;
+    color: rgb(86, 86, 86);
+    font-weight: 600;
+    margin-bottom: -10px;
+}
+.point
+{
+    width: 400px;
+    margin-bottom: -10px;
+    font-size: 1.2rem;
+    color: gray;
+}
+.add_note
+{
+    cursor: pointer;
+    height: 60px;
+    width: 250px;
+    margin-top: 90px;
+    background-image: linear-gradient(to right, rgb(20, 91, 20), rgb(25, 180, 25));
+    border:none;
+    border-radius: 60px;
+    color: rgba(255, 255, 255, 0.882);
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-align: left;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.add_icon
+{
+    opacity: 0.8;
+    margin-left: 20px;
+}
+.but_footer
+{
+    text-align: center;
+    font-size: 1.11rem;
+    color: grey;
+    width: 415px;
+    height: auto;
+}
+@media(max-width:1050px)
+{
+    .logout_but
+    {
+        opacity: 0;
+    }
+    .logout_but_two
+    {
+        opacity: 1;
+        position: absolute;
+        top: 45px;
+        right: 8px;
+    }
+}

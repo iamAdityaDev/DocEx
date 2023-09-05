@@ -1,0 +1,184 @@
+.box_note_item
+{
+    height: 183px;
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    border: solid 2px rgb(215, 215, 215);
+    border-radius: 7px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.horizontal_box_note_item
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.icon_note_item
+{
+    cursor: pointer;
+    position: relative;
+    top: -7px;
+    left: 0px;
+    opacity: 0.5;
+}
+.note_box_title
+{
+    width: 200px;
+    font-size: 1.2rem;
+    /* background-color: red; */
+    padding: 10px;
+    padding-left: 20px;
+    color: rgb(88, 88, 88);
+    margin-top: 4px;
+}
+.note_box_desc
+{
+    font-size: 1rem;
+    padding: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: rgb(116, 116, 116);
+    margin-top: -30px;
+}
+
+
+
+.eback_for_add_note
+{
+    display: none;
+    z-index: 98;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.46);
+}
+.emodal_note_back_support
+{
+    z-index: 99;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0px;
+    left: 0;
+}
+.emodal_add_note
+{
+    display: none;
+    z-index: 99;
+    height: 570px;
+    width: 600px;
+    background-color: white;
+    position: absolute;
+    top:90px;
+    /* margin-top: 0; */
+    border-radius: 11px;
+}
+.emodal_add_note_div
+{
+    height:82%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: red; */
+    margin-top: 4%;
+    margin-left: 5%;
+}
+.etitle_add_note
+{
+    height: 50px;
+    width: 85%;
+    /* background-color: red; */
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: rgb(95, 95, 95);
+    border: none;
+    position: relative;
+    left: -7%;
+}
+.etitle_add_note::placeholder
+{
+    color: rgb(157, 157, 157);
+}
+.etitle_add_note:focus
+{
+    outline: none;
+}
+.edesc_add_note
+{
+    height: 385px;
+    width: 96%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(81, 81, 81);
+    resize: none;
+    /* margin-top: 10.5%; */
+    font-size: 1.1rem;
+    border: none;
+    position: relative;
+    top: 2.5%;
+}
+.edesc_add_note:focus
+{
+    outline: none;
+}
+.eadd_but_add_note
+{
+    cursor: pointer;
+    height: 40px;
+    width: 125px;
+    background-color: grey;
+    color: white;
+    border:none;
+    font-size: 1.11rem;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 30px;
+    left: 32px;
+}
+.eclose_add_note
+{
+    cursor: pointer;
+    opacity: 0.55;
+    position: absolute;
+    top:20px;
+    right:20px ;
+}
+
+@media(max-width:640px)
+{
+    .emodal_add_note
+{
+    display: none;
+    z-index: 99;
+    height: 570px;
+    width: 450px;
+    background-color: white;
+    position: absolute;
+    top:90px;
+    /* margin-top: 0; */
+    border-radius: 11px;
+}
+}
+@media(max-width:570px)
+{
+    .emodal_add_note
+{
+    display: none;
+    z-index: 99;
+    height: 570px;
+    width: 390px;
+    background-color: white;
+    position: absolute;
+    top:90px;
+    /* margin-top: 0; */
+    border-radius: 11px;
+}
+}

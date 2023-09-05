@@ -1,0 +1,147 @@
+.back_for_add_note
+{
+    display: none;
+    z-index: 98;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.46);
+}
+.back_support_add_note
+{
+    z-index: 99;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0px;
+    left: 0;
+}
+.modal_add_note
+{
+    display: none;
+    z-index: 99;
+    height: 570px;
+    width: 680px;
+    background-color: white;
+    position: fixed;
+    top:90px;
+    border-radius: 11px;
+}
+.modal_add_note_div
+{
+    height:82%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: red; */
+    margin-top: 4%;
+    margin-left: 5%;
+}
+.title_add_note
+{
+    height: 50px;
+    width: 85%;
+    /* background-color: red; */
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: rgb(95, 95, 95);
+    border: none;
+    position: relative;
+    left: -7%;
+}
+.title_add_note::placeholder
+{
+    color: rgb(157, 157, 157);
+}
+.title_add_note:focus
+{
+    outline: none;
+}
+.desc_add_note
+{
+    height: 385px;
+    width: 96%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(81, 81, 81);
+    resize: none;
+    /* margin-top: 10.5%; */
+    font-size: 1.1rem;
+    border: none;
+    position: relative;
+    top: 2.5%;
+}
+.desc_add_note:focus
+{
+    outline: none;
+}
+.add_but_add_note
+{
+    cursor: pointer;
+    height: 40px;
+    width: 100px;
+    background-color: grey;
+    color: white;
+    border:none;
+    font-size: 1.11rem;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 30px;
+    left: 32px;
+}
+.close_add_note
+{
+    cursor: pointer;
+    opacity: 0.55;
+    position: absolute;
+    top:20px;
+    right:20px ;
+}
+
+@media(max-width:760px)
+{
+    .modal_add_note
+    {
+        display: none;
+        z-index: 99;
+        height: 570px;
+        width: 500px;
+        background-color: white;
+        position: fixed;
+        top:90px;
+        border-radius: 11px;
+    }
+}
+@media(max-width:640px)
+{
+    .modal_add_note
+    {
+        display: none;
+        z-index: 99;
+        height: 570px;
+        width: 450px;
+        background-color: white;
+        position: fixed;
+        top:90px;
+        border-radius: 11px;
+    }
+}
+@media(max-width:570px)
+{
+    .modal_add_note
+    {
+        display: none;
+        z-index: 99;
+        height: 570px;
+        width: 390px;
+        background-color: white;
+        position: fixed;
+        top:90px;
+        border-radius: 11px;
+    }
+}

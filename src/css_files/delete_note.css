@@ -1,0 +1,77 @@
+.back_for_delete_note
+{
+    display: none;
+    z-index: 98;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.46);
+}
+.back_support_delete
+{
+    z-index: 99;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 250px;
+    left: 0;
+}
+.delete_modal
+{
+    display: none;
+    height: 125px;
+    width: 370px;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.delete_message_note
+{
+    text-align: center;
+    font-size: 1.09rem;
+    color: grey;
+    font-weight: 600;
+    margin-top: 0px;
+}
+.delete_buttons_div
+{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.cancel_delete
+{
+    cursor: pointer;
+    height: 29px;
+    width: 100px;
+    border: solid 2px grey;
+    border-radius: 5px;
+    color: rgb(95, 95, 95);
+    font-size: 1.05rem;
+    background-color: rgb(244, 244, 244);
+    margin-right: 7px;
+}
+.delete_delete
+{
+    cursor: pointer;
+    height: 31px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    color:white;
+    font-size: 1.05rem;
+    background-color: rgb(139, 139, 139);
+    margin-left: 7px;
+}

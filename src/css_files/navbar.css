@@ -1,0 +1,41 @@
+.navbar
+{
+    height: 60px;
+    width: 100%;
+    /* background-color: red; */
+    position: absolute;
+    top:0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.docex
+{
+    opacity: 0.8;
+    color:rgb(0, 119, 0);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-right: auto;
+    margin-left: 20px;
+}
+.nav
+{
+    height: auto;
+    width:200px;
+    /* background-color: red; */
+    margin-right: 77.5%;
+    margin-top: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.nav_comp
+{
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: rgb(0, 149, 77);
+    margin-right: 10%;
+    margin-left: 10%;
+}
