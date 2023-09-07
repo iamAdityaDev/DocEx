@@ -31,10 +31,10 @@ const Landing = () => {
         localStorage.setItem('token',json.authtoken)
         navigate('/home');
       }
-      // else
-      // {
-      //   alert("Invalid credentials!!")
-      // }
+      else
+      {
+        alert("Invalid credentials!!")
+      }
     }
 
     const onchange_login_credentials=(e)=>{
@@ -98,11 +98,11 @@ const Landing = () => {
               <div className="body_back_landing">
                 <div className="log_signup">
                       <p className="do_to_id">Go to your DocEx ID</p>
-                      <form className="login_form" action="">
+                      <form onSubmit={handle_submit_login} className="login_form" action="">
                           <input onChange={onchange_login_credentials} className="login_docex_id" type="text" id="docex_id" name="docex_id" placeholder="Enter DocEx ID.." required/>
                           <div className="pass_submit_back">
-                            <input onChange={onchange_login_credentials} className="login_password" type="password" id="password" name="password" placeholder="Enter Password.." required></input>
-                            <button onClick={handle_submit_login} className="goto_login">Go</button>
+                            <input onChange={onchange_login_credentials} minLength="5" className="login_password" type="password" id="password" name="password" placeholder="Enter Password.." required></input>
+                            <button type="submit" className="goto_login">Go</button>
                           </div>
                       </form>
                       <p className="user_creation_message">To Create a new DocEx ID <button onClick={open_signup_modal} className="click_to_create_user">Click Here</button></p>
