@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext,useEffect, useState } from "react";
 import noteContext from "../context/notes/noteContext";
 import "../css_files/home.css";
 import "../css_files/add_note.css";
@@ -8,14 +8,36 @@ import CloseIcon from '@mui/icons-material/Close';
 import Navbar from "./Navbar";
 import { useNavigate } from 'react-router-dom';
 import LogoutIcon from '@mui/icons-material/Logout';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 const Home = () => {
   const navigate = useNavigate();
   const [note, setnote] = useState({title:"", description:""})
+  const [user, setUser] = useState('fetching user...');
 
   const context=useContext(noteContext)
   const {addNote,getNotes}=context
 
+  useEffect(() => {
+    // eslint-disable-next-line
+    const fetchData = async () => {
+      try {
+        close_logout_modal();
+        const response = await fetch(`http://localhost:4000/api/auth/getuser`, {
+          method: "POST",
+          headers: {
+            "auth-token": localStorage.getItem("token"),
+          },
+        });
+        const json = await response.json();
+        // console.log(json.docex_id);
+        setUser(json.docex_id);
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+      }
+    };
+    fetchData();
+  }, []);
   const handleclick=(e)=>{
     let modal=document.getElementById('modal_add_note_id')
     let back=document.getElementById('back_for_add_note_id')
@@ -43,7 +65,17 @@ const Home = () => {
     modal.style.display="none"
     back.style.display="none"
   }
-  const logout_func=()=>{
+
+  const open_logout_div=()=>{
+    let logout=document.getElementById('logout_user_id')
+    logout.style.display="flex"
+  }
+  const close_logout_modal=()=>{
+    let logout=document.getElementById('logout_user_id')
+    logout.style.display="none"
+  }
+
+  const logout_karo=()=>{
     localStorage.removeItem('token')
     navigate('/')
   }
@@ -88,8 +120,11 @@ const Home = () => {
             </div>
         </div>
 
-        <button onClick={logout_func} className="logout_but"><LogoutIcon className="logout_icon"/>Logout</button>
-        <button onClick={logout_func} className="logout_but_two"><LogoutIcon className="logout_icon_two"/></button>
+        <AccountCircleIcon onClick={open_logout_div} sx={{ fontSize: 35 }} className="user_icon"/>
+        <div id="logout_user_id" className="logout_user">
+          <p id="user_name_text_id" className="user_name"><AccountCircleIcon className="user_open_div"/>{user} <CloseIcon onClick={close_logout_modal} sx={{ fontSize: 21 }} id="close_logout_id" className="close_logout_div"/></p>
+          <button onClick={logout_karo} className="logout_but"><LogoutIcon className="logout_icon"/>Logout</button>
+        </div>
         <Notes />
 
       </div>

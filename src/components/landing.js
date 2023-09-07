@@ -25,12 +25,10 @@ const Landing = () => {
         body:JSON.stringify({docex_id:credentials.docex_id, password:credentials.password})
       })
       const json=await response.json()
-      console.log(json)
 
       if (json.success)
       {
         localStorage.setItem('token',json.authtoken)
-        console.log(localStorage)
         navigate('/home');
       }
       else
@@ -41,7 +39,6 @@ const Landing = () => {
 
     const onchange_login_credentials=(e)=>{
         setcredentials({...credentials,[e.target.name]: e.target.value})
-        console.log(credentials)
     }
 
     const handle_submit_signup=async(e)=>{
@@ -54,12 +51,10 @@ const Landing = () => {
         body:JSON.stringify({docex_id:credentials_signup.docex_id, password:credentials_signup.password})
       })
       const json=await response.json()
-      console.log(json)
 
       if (json.success)
       {
         localStorage.setItem('token',json.authtoken)
-        // alert("Yeah!!")
         navigate('/home');
       }
       else
@@ -69,7 +64,6 @@ const Landing = () => {
     }
     const onchange_signup_credentials=(e)=>{
         setcredentials_signup({...credentials_signup,[e.target.name]: e.target.value})
-        console.log(credentials_signup)
     }
     
     const open_signup_modal=()=>
@@ -87,6 +81,7 @@ const Landing = () => {
         back.style.display="none"
     }
     useEffect(() => {
+      // eslint-disable-next-line
         close_signup_modal();
     }, []);
 
