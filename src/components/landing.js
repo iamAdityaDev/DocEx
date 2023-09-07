@@ -31,10 +31,10 @@ const Landing = () => {
         localStorage.setItem('token',json.authtoken)
         navigate('/home');
       }
-      else
-      {
-        alert("Invalid credentials!!")
-      }
+      // else
+      // {
+      //   alert("Invalid credentials!!")
+      // }
     }
 
     const onchange_login_credentials=(e)=>{
@@ -57,10 +57,10 @@ const Landing = () => {
         localStorage.setItem('token',json.authtoken)
         navigate('/home');
       }
-      else
-      {
-        alert("Invalid credentials!!")
-      }
+      // else
+      // {
+      //   alert("Invalid credentials!!")
+      // }
     }
     const onchange_signup_credentials=(e)=>{
         setcredentials_signup({...credentials_signup,[e.target.name]: e.target.value})
@@ -184,12 +184,12 @@ const Landing = () => {
                    Just choose a unique Docex ID and a secure password, and you're ready to start saving
                     and organizing your notes hassle-free.</p>
                   
-                  <form action="" className="signup_form">
+                  <form onSubmit={handle_submit_signup} action="" className="signup_form">
                       <p className="create_docex_id_p">Create a unique DocEx ID</p>
                       <input onChange={onchange_signup_credentials} className="signup_docex_id" type="text" name="docex_id" placeholder="ex. institute_note__iiitdwd.." required/>
                       <p className="create_docex_id_pass_p">Create your password</p>
-                      <input onChange={onchange_signup_credentials} className="signup_password" type="password" name="password" required></input>
-                      <button onClick={handle_submit_signup} className="goto_signup">Create</button>
+                      <input onChange={onchange_signup_credentials} className="signup_password" minLength="5" type="password" name="password" required></input>
+                      <button type="submit" className="goto_signup">Create</button>
                   </form>
               </div>
             </div>

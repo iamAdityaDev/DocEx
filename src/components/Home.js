@@ -85,13 +85,14 @@ const Home = () => {
     <Navbar/>
      <div id="back_for_add_note_id" className="back_for_add_note"></div>
      <div className="back_support_add_note">
-        <form id="modal_add_note_id" className="modal_add_note">
+      
+        <form onSubmit={handleclick} id="modal_add_note_id" className="modal_add_note">
             <CloseIcon onClick={close_add_note} className="close_add_note"/>
             <div className="modal_add_note_div">
-                <input onChange={onchange} className="title_add_note" type="text" id="title" name="title" placeholder="Title"/>
-                <textarea onChange={onchange} className="desc_add_note" id="description" name="description" placeholder="Write here..."></textarea>
+                <input onChange={onchange} className="title_add_note" minLength="4" type="text" id="title" name="title" placeholder="Title" required/>
+                <textarea onChange={onchange} className="desc_add_note" minLength="6" id="description" name="description" placeholder="Write here..." required></textarea>
             </div>
-            <button onClick={handleclick} className="add_but_add_note">Add Note</button>
+            <button type="submit" className="add_but_add_note">Add Note</button>
         </form>
       </div>
 
