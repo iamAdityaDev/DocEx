@@ -119,10 +119,10 @@
 {
     .modal_add_note
     {
-        height: 97%;
-        width: 97%;
+        height: 94%;
+        width: 90%;
         position: fixed;
-        top:10px;
+        top:3%;
     }
 }
 @media(max-width:570px)
@@ -130,6 +130,6 @@
     .modal_add_note
     {
         position: fixed;
-        top:10px;
+        top:3%;
     }
 }
