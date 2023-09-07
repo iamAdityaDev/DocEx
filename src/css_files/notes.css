@@ -8,10 +8,10 @@
 }
 .created_head
 {
+    text-align: center;
     font-size: 2.3rem;
     color: rgb(85, 85, 85);
     font-weight: 600;
-    margin-left: 5.8%;
     margin-top: 55px;
 }
 .container_notes_created
@@ -21,7 +21,6 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-left: 4.5%;
-    margin-right: 5%;
+    justify-content: center;
     margin-top: -15px;
 }

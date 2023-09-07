@@ -3,8 +3,8 @@
     cursor: pointer;
     opacity:0.5;
     position: absolute;
-    top:42px;
-    right: 11px;
+    top:46px;
+    right: 15px;
 }
 .close_logout_div
 {
@@ -25,8 +25,8 @@
     border-radius: 4px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: absolute;
-    top:43px;
-    right: 12px;
+    top:46px;
+    right: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -159,18 +159,4 @@
     color: grey;
     width: 415px;
     height: auto;
-}
-@media(max-width:1050px)
-{
-    /* .logout_but
-    {
-        opacity: 0;
-    }
-    .logout_but_two
-    {
-        opacity: 1;
-        position: absolute;
-        top: 45px;
-        right: 8px;
-    } */
 }
