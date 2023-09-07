@@ -17,7 +17,7 @@ const Landing = () => {
 
     const handle_submit_login=async(e)=>{
         e.preventDefault()
-        const response=await fetch(`http://localhost:4000/api/auth/login`,{
+        const response=await fetch(`${process.env.REACT_APP_SERVER_URL}/api/auth/login`,{
         method:'POST',
         headers:{
           'Content-Type': 'application/json'
@@ -43,7 +43,7 @@ const Landing = () => {
 
     const handle_submit_signup=async(e)=>{
         e.preventDefault()
-        const response=await fetch(`http://localhost:4000/api/auth/createuser`,{
+        const response=await fetch(`${process.env.REACT_APP_SERVER_URL}/api/auth/createuser`,{
         method:'POST',
         headers:{
           'Content-Type': 'application/json'

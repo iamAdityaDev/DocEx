@@ -23,7 +23,7 @@ const Home = () => {
     const fetchData = async () => {
       try {
         close_logout_modal();
-        const response = await fetch(`http://localhost:4000/api/auth/getuser`, {
+        const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/api/auth/getuser`, {
           method: "POST",
           headers: {
             "auth-token": localStorage.getItem("token"),
@@ -120,10 +120,10 @@ const Home = () => {
             </div>
         </div>
 
-        <AccountCircleIcon onClick={open_logout_div} sx={{ fontSize: 35 }} className="user_icon"/>
+        <AccountCircleIcon onClick={open_logout_div} sx={{ fontSize: 32 }} className="user_icon"/>
         <div id="logout_user_id" className="logout_user">
-          <p id="user_name_text_id" className="user_name"><AccountCircleIcon className="user_open_div"/>{user} <CloseIcon onClick={close_logout_modal} sx={{ fontSize: 21 }} id="close_logout_id" className="close_logout_div"/></p>
-          <button onClick={logout_karo} className="logout_but"><LogoutIcon className="logout_icon"/>Logout</button>
+          <p id="user_name_text_id" className="user_name"><AccountCircleIcon className="user_open_div"/>{user} <CloseIcon onClick={close_logout_modal} sx={{ fontSize: 20 }} id="close_logout_id" className="close_logout_div"/></p>
+          <button onClick={logout_karo} className="logout_but"><LogoutIcon sx={{ fontSize: 21 }} className="logout_icon"/>Logout</button>
         </div>
         <Notes />
 
