@@ -16,7 +16,7 @@ const Home = () => {
   const [user, setUser] = useState('fetching user...');
 
   const context=useContext(noteContext)
-  const {addNote,getNotes}=context
+  const {addNote}=context
 
   useEffect(() => {
     // eslint-disable-next-line
@@ -45,7 +45,6 @@ const Home = () => {
     back.style.display="none"
     e.preventDefault()
     addNote(note.title, note.description)
-    getNotes()
   }
 
   const onchange=(e)=>{
@@ -53,6 +52,10 @@ const Home = () => {
   }
 
   const go_to_add_note = () => {
+    let title=document.getElementById('title')
+    title.value=""
+    let description=document.getElementById('description')
+    description.value=""
     let modal=document.getElementById('modal_add_note_id')
     let back=document.getElementById('back_for_add_note_id')
     modal.style.display="flex"

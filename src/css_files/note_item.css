@@ -28,7 +28,7 @@
 }
 .note_box_title
 {
-    width: 235px;
+    width: 220px;
     font-size: 1.35rem;
     font-weight: 600;
     /* background-color: red; */
@@ -36,10 +36,11 @@
     padding-left: 20px;
     color: rgb(106, 106, 106);
     margin-top: 2.5px;
+    overflow: hidden;
 }
 .note_box_desc
 {
-    /* background-color: red; */
+    /* background-color: green; */
     font-size: 1rem;
     padding: 15px;
     padding-left: 20px;
@@ -49,7 +50,9 @@
     word-wrap: break-word;
     white-space: pre-wrap;
     overflow: hidden;
-    max-height: 97px;
+    height: 97px;
+    width: 270px;
+
 }
 
 
@@ -171,11 +174,25 @@
         top:3%;
     }
 }
-@media(max-width:570px)
+@media(max-width:685px)
 {
     .emodal_add_note
     {
         position: fixed;
         top:3%;
+    }
+    .box_note_item
+    {
+        height: 245px;
+        width: 410px;
+    }
+    .note_box_title
+    {
+        width: 320px;
+    }
+    .note_box_desc
+    {
+        height: 160px;
+        width: 370px;
     }
 }

@@ -111,7 +111,9 @@ const Notes=()=>{
         <div className="below_part_add_note">
           <p className='created_head'>Created Notes</p>
           <div className="container_notes_created">
-            {notes.map((note)=>{
+            {notes.length===0?
+            (<p className='custom-message'>No notes to display...</p>):
+            notes.map((note)=>{
                 return <Noteitem key={note._id} note={note} updatenote={updatenote} delete_kar={delete_kar}/>
             })}
           </div>

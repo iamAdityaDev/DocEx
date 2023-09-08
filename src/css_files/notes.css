@@ -13,6 +13,7 @@
     color: rgb(85, 85, 85);
     font-weight: 600;
     margin-top: 55px;
+    margin-left: -9px;
 }
 .container_notes_created
 {
@@ -23,4 +24,13 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-top: -15px;
+}
+.custom-message
+{
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: rgb(143, 143, 143);
+    position: relative;
+    top: -6px;
 }
