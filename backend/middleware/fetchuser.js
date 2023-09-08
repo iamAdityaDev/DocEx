@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
-const JWT_SECRET = "Harryisagoodboy";
+require('dotenv').config();
+const JWT_SECRET = process.env.JWT_SECRET;
 
 const fetchuser = (req, res, next) => {
     const token = req.header('auth-token');
@@ -8,7 +9,6 @@ const fetchuser = (req, res, next) => {
     }
     try {
         const decoded = jwt.verify(token, JWT_SECRET);
-        // console.log('Decoded Token:', decoded); // Log the decoded token
         req.user = decoded.user;
         next();
     } catch (error) {

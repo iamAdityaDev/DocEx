@@ -89,8 +89,8 @@ const Home = () => {
         <form onSubmit={handleclick} id="modal_add_note_id" className="modal_add_note">
             <CloseIcon onClick={close_add_note} className="close_add_note"/>
             <div className="modal_add_note_div">
-                <input onChange={onchange} className="title_add_note" minLength="4" type="text" id="title" name="title" placeholder="Title" required/>
-                <textarea onChange={onchange} className="desc_add_note" minLength="6" id="description" name="description" placeholder="Write here..." required></textarea>
+                <input onChange={onchange} className="title_add_note" minLength="3" type="text" id="title" name="title" placeholder="Title" required/>
+                <textarea onChange={onchange} className="desc_add_note" minLength="5" id="description" name="description" placeholder="Write here..." required></textarea>
             </div>
             <button type="submit" className="add_but_add_note">Add Note</button>
         </form>
@@ -123,7 +123,7 @@ const Home = () => {
 
         <AccountCircleIcon onClick={open_logout_div} sx={{ fontSize: 39 }} className="user_icon"/>
         <div id="logout_user_id" className="logout_user">
-          <p id="user_name_text_id" className="user_name"><AccountCircleIcon className="user_open_div"/>{user} <CloseIcon onClick={close_logout_modal} sx={{ fontSize: 25 }} id="close_logout_id" className="close_logout_div"/></p>
+          <p id="user_name_text_id" className="user_name"><AccountCircleIcon className="user_open_div"/>{user} <CloseIcon onClick={close_logout_modal} sx={{ fontSize: 22 }} id="close_logout_id" className="close_logout_div"/></p>
           <button onClick={logout_karo} className="logout_but"><LogoutIcon sx={{ fontSize: 22 }} className="logout_icon"/>Logout</button>
         </div>
         <Notes />

@@ -1,46 +1,55 @@
 .box_note_item
 {
+    cursor: pointer;
     height: 183px;
     width: 310px;
     display: flex;
     flex-direction: column;
     border: solid 2px rgb(215, 215, 215);
-    border-radius: 7px;
+    border-radius: 11px;
     margin-left: 20px;
     margin-bottom: 20px;
+    /* background-color: blue; */
+    position: relative;
 }
 .horizontal_box_note_item
 {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    /* background-color: red; */
 }
 .icon_note_item
 {
     cursor: pointer;
-    position: relative;
-    top: -7px;
-    left: 0px;
-    opacity: 0.5;
+    position: absolute;
+    top:11px;
+    right: 11px;
+    opacity: 0.45;
 }
 .note_box_title
 {
-    width: 200px;
-    font-size: 1.2rem;
+    width: 235px;
+    font-size: 1.35rem;
+    font-weight: 600;
     /* background-color: red; */
     padding: 10px;
     padding-left: 20px;
-    color: rgb(88, 88, 88);
-    margin-top: 4px;
+    color: rgb(106, 106, 106);
+    margin-top: 2.5px;
 }
 .note_box_desc
 {
+    /* background-color: red; */
     font-size: 1rem;
     padding: 15px;
     padding-left: 20px;
     padding-right: 20px;
-    color: rgb(116, 116, 116);
-    margin-top: -30px;
+    color: rgb(131, 131, 131);
+    margin-top: -38px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    overflow: hidden;
+    max-height: 97px;
 }
 
 
@@ -76,7 +85,7 @@
     height: 570px;
     width: 600px;
     background-color: white;
-    position: absolute;
+    position: fixed;
     top:90px;
     /* margin-top: 0; */
     border-radius: 11px;

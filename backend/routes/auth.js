@@ -4,7 +4,8 @@ const router = express.Router();
 const { body, validationResult } = require("express-validator");
 const bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
-const JWT_SECRET = 'Harryisagoodboy';
+require('dotenv').config();
+const JWT_SECRET = process.env.JWT_SECRET;
 const fetchuser=require('../middleware/fetchuser')
 
 router.post(
@@ -79,7 +80,7 @@ router.post("/login", [
         const authtoken = jwt.sign(data, JWT_SECRET);
         res.json({ success: true, authtoken });
     } catch (error) {
-        console.error(error.message); // Log the error for debugging
+        console.error(error.message);
         res.status(500).send("Internal server error");
     }
 });

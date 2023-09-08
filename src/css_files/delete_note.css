@@ -19,7 +19,7 @@
     align-items: center;
     justify-content: center;
     position: fixed;
-    top: 250px;
+    top: 293px;
     left: 0;
 }
 .delete_modal
@@ -74,4 +74,13 @@
     font-size: 1.05rem;
     background-color: rgb(139, 139, 139);
     margin-left: 7px;
+}
+@media(max-width:570px)
+{
+    .back_support_delete
+    {
+        position: fixed;
+        top: 320px;
+        left: 0;
+    }
 }
