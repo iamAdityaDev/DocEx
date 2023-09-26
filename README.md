@@ -31,5 +31,7 @@ This app allows you to create, read, update, and delete notes. It also includes 
 
 To authenticate, you need a unique docex id and password.
 
+## Link :
+https://docex-frontend.onrender.com
 
 Thank you for using Notes App!
