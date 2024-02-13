@@ -1,0 +1,227 @@
+.logo_landing
+{
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: rgb(0, 102, 0);
+    margin: 20px;
+    margin-left: 6%;
+}
+.log_signup
+{
+    height: auto;
+    width: auto;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.do_to_id
+{
+    font-size: 1.83rem;
+    font-weight: 600;
+    color: rgb(102, 102, 102);
+    margin-bottom: 11px;
+}
+.login_form
+{
+    height: auto;
+    width: auto;
+    margin-bottom: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pass_submit_back
+{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+}
+.login_docex_id
+{
+    height: 31px;
+    width: 250px;
+    font-size: 0.93rem;
+    border:solid 2px rgb(167, 167, 167);
+    border-radius: 5px;
+    padding-left: 8px;
+    padding-right: 7px;
+    margin-left: 0px;
+    margin-bottom: 11px;
+}
+.login_password
+{
+    height: 31px;
+    width: 197px;
+    font-size: 0.93rem;
+    border:solid 2px rgb(167, 167, 167);
+    border-radius: 5px;
+    padding-left: 8px;
+    padding-right: 7px;
+}
+.goto_login
+{
+    cursor: pointer;
+    height: 36px;
+    width: 44px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.09rem;
+    color: white;
+    background-color: rgb(0, 152, 0);
+    margin-left: 10px;
+}
+.user_creation_message
+{
+    font-size: 1.1rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(160, 160, 160);
+    margin-top: 25px;
+}
+.click_to_create_user
+{
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 1rem;
+    background-color: transparent;
+    border: none;
+    color:rgba(252, 56, 56, 0.685);
+    
+}
+
+.back_for_signup
+{
+    display: none;
+    z-index: 98;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.581);
+}
+.signup_back_landing
+{
+    display: none;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+.signup_modal
+{
+    z-index: 99;
+    height:auto;
+    width: 500px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: relative;
+}
+.close_sign_up
+{
+    cursor: pointer;
+    opacity: 0.4;
+    position: absolute;
+    top:9px;
+    right:10px;
+}
+.signup_form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -17px;
+}
+.create_here
+{
+    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: rgb(107, 107, 107);
+    text-align: center;
+    margin-top: 15px;
+}
+.signup_info
+{
+    font-size: 1rem;
+    color: rgb(140, 140, 140);
+    margin-top: -15px;
+    margin-left: 18px;
+    margin-right: 18px;
+    text-align: center;
+}
+.create_docex_id_p
+{
+    color: rgb(77, 77, 77);
+    font-size: 1.15rem;
+}
+.create_docex_id_pass_p
+{
+    color: rgb(81, 81, 81);
+    font-size: 1.15rem;
+    margin-top:15px;
+}
+
+.signup_docex_id
+{
+    height: 33px;
+    width: 250px;
+    font-size: 0.95rem;
+    color: rgb(120, 119, 119);
+    border: solid 2px rgb(201, 201, 201);
+    border-radius: 6px;
+    margin-top: -12px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+.signup_password
+{
+    height: 33px;
+    width: 250px;
+    font-size: 0.95rem;
+    color: rgb(120, 119, 119);
+    border: solid 2px rgb(201, 201, 201);
+    border-radius: 6px;
+    margin-top: -12px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+.signup_docex_id::placeholder
+{
+    color: rgb(174, 174, 174);
+}
+.signup_docex_id:focus, .signup_password:focus
+{
+    outline: none;
+}
+.goto_signup
+{
+    cursor: pointer;
+    height: 35px;
+    width: 95px;
+    border: none;
+    color: white;
+    font-size: 1.13rem;
+    font-weight: 600;
+    background-color: rgb(113, 113, 113);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+@media(max-width:850px)
+{
+    .signup_modal
+    {
+        height:auto;
+        width: 430px;
+    }
+}
