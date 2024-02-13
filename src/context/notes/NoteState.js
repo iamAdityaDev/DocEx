@@ -6,7 +6,7 @@ const NoteState = (props) => {
     const [notes, setnotes] = useState(s1)
 
     const getNotes=async()=>{
-      const response=await fetch(`https://docex-backend.onrender.com/api/notes/fetchallnotes`,{
+      const response=await fetch(`http://localhost:4000/api/notes/fetchallnotes`,{
         method:'GET',
         headers:{
           'auth-token': localStorage.getItem('token'),
@@ -18,7 +18,7 @@ const NoteState = (props) => {
     }
 
     const addNote=async(title, description)=>{
-      const response=await fetch(`https://docex-backend.onrender.com/api/notes/addnote`,{
+      const response=await fetch(`http://localhost:4000/api/notes/addnote`,{
         method:'POST',
         headers:{
           'auth-token': localStorage.getItem('token'),
@@ -31,7 +31,7 @@ const NoteState = (props) => {
     }
 
     const deleteNote=async(id)=>{
-      const response=await fetch(`https://docex-backend.onrender.com/api/notes/delete/${id}`,{
+      const response=await fetch(`http://localhost:4000/api/notes/delete/${id}`,{
         method:'DELETE',
         headers:{
           'auth-token': localStorage.getItem('token'),
@@ -43,7 +43,7 @@ const NoteState = (props) => {
     }
 
     const editNote=async(id, title, description)=>{
-      const response=await fetch(`https://docex-backend.onrender.com/api/notes/update/${id}`,{
+      const response=await fetch(`http://localhost:4000/api/notes/update/${id}`,{
         method:'PUT',
         headers:{
           'auth-token': localStorage.getItem('token'),
