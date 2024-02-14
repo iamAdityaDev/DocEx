@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    margin-bottom: 10px;
 }
 .box_note_item
 {
@@ -13,7 +14,7 @@
     width: 310px;
     display: flex;
     flex-direction: column;
-    border: solid 2px rgb(220, 220, 220);
+    border: solid 2px rgb(226, 226, 226);
     border-radius: 7px;
     margin-left: 20px;
     margin-bottom: 20px;
@@ -55,11 +56,11 @@
 .note_box_desc
 {
     height: 125px;
-    font-size: 1rem;
+    font-size: 1.05rem;
     padding: 5px;
     padding-left: 20px;
     padding-right: 20px;
-    color: rgb(165, 165, 165);
+    color: rgb(173, 173, 173);
     margin-top: -30px;
     position: relative;
     top:20px;
