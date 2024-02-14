@@ -1,46 +1,70 @@
+.outside_box
+{
+    width: 310px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
 .box_note_item
 {
-    height: 183px;
+    z-index: 3;
+    height: 197px;
     width: 310px;
     display: flex;
     flex-direction: column;
-    border: solid 2px rgb(215, 215, 215);
+    border: solid 2px rgb(220, 220, 220);
     border-radius: 7px;
     margin-left: 20px;
     margin-bottom: 20px;
 }
 .horizontal_box_note_item
 {
+    height: 30px;
+    /* background-color: green; */
     display: flex;
     flex-direction: row;
     align-items: center;
+    position: relative;
+    top:17px;
+    margin-bottom: 23px;
 }
+
 .icon_note_item
 {
+    z-index: 4;
     cursor: pointer;
-    position: relative;
-    top: -7px;
-    left: 0px;
     opacity: 0.5;
+    position: absolute;
+    right: 16px;
+    top:15px;
 }
 .note_box_title
 {
-    width: 200px;
+    width: 210px;
+    height: 20px;
     font-size: 1.2rem;
     /* background-color: red; */
     padding: 10px;
     padding-left: 20px;
     color: rgb(88, 88, 88);
     margin-top: 4px;
+    overflow: hidden;
 }
 .note_box_desc
 {
+    height: 125px;
     font-size: 1rem;
-    padding: 15px;
+    padding: 5px;
     padding-left: 20px;
     padding-right: 20px;
     color: rgb(116, 116, 116);
     margin-top: -30px;
+    position: relative;
+    top:20px;
+    /* background-color: green; */
+    overflow:hidden ;
+    margin-right: 30px;
 }
 
 
@@ -154,6 +178,10 @@
 
 @media(max-width:640px)
 {
+    .note_box_title
+{
+    width: 75%;
+}
     .emodal_add_note
 {
     display: none;
@@ -166,19 +194,21 @@
     /* margin-top: 0; */
     border-radius: 11px;
 }
+.outside_box
+{
+    width: 100%;
 }
-@media(max-width:570px)
+.box_note_item
 {
-    .emodal_add_note
+    width: 95%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.icon_note_item
 {
-    display: none;
-    z-index: 99;
-    height: 570px;
-    width: 390px;
-    background-color: white;
     position: absolute;
-    top:90px;
-    /* margin-top: 0; */
-    border-radius: 11px;
+    right: 7%;
+    top:14px;
 }
 }
