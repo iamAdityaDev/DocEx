@@ -43,13 +43,14 @@
 {
     width: 210px;
     height: 20px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     /* background-color: red; */
-    padding-bottom: 2px;
+    padding-bottom: 3px;
     padding-left: 20px;
-    color: rgb(88, 88, 88);
+    color: rgb(128, 128, 128);
     margin-top: 4px;
     overflow: hidden;
+    font-weight: 500;
 }
 .note_box_desc
 {
@@ -58,7 +59,7 @@
     padding: 5px;
     padding-left: 20px;
     padding-right: 20px;
-    color: rgb(116, 116, 116);
+    color: rgb(165, 165, 165);
     margin-top: -30px;
     position: relative;
     top:20px;
