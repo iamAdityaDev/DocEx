@@ -43,7 +43,7 @@
 .note_box_title
 {
     width: 210px;
-    height: 19px;
+    height: 19.5px;
     font-size: 1.3rem;
     /* background-color: red; */
     padding-bottom: 8px;
@@ -64,7 +64,7 @@
     margin-top: -30px;
     position: relative;
     top:26px;
-    background-color: green;
+    /* background-color: green; */
     overflow:hidden ;
     margin-right: 30px;
 }
@@ -212,5 +212,10 @@
     position: absolute;
     right: 7%;
     top:19.5px;
+}
+.note_box_desc
+{
+    height: 113.5px;
+    /* background-color: green; */
 }
 }
