@@ -27,7 +27,7 @@
     flex-direction: row;
     align-items: center;
     position: relative;
-    top:17px;
+    top:24px;
     margin-bottom: 23px;
 }
 
@@ -38,7 +38,7 @@
     opacity: 0.5;
     position: absolute;
     right: 16px;
-    top:13px;
+    top:20px;
 }
 .note_box_title
 {
@@ -46,24 +46,24 @@
     height: 20px;
     font-size: 1.3rem;
     /* background-color: red; */
-    padding-bottom: 3px;
+    padding-bottom: 8px;
     padding-left: 20px;
-    color: rgb(128, 128, 128);
+    color: rgb(104, 104, 104);
     margin-top: 4px;
     overflow: hidden;
     font-weight: 500;
 }
 .note_box_desc
 {
-    height: 125px;
+    height: 108px;
     font-size: 1.05rem;
     padding: 5px;
     padding-left: 20px;
     padding-right: 20px;
-    color: rgb(173, 173, 173);
+    color: rgb(153, 153, 153);
     margin-top: -30px;
     position: relative;
-    top:20px;
+    top:26px;
     /* background-color: green; */
     overflow:hidden ;
     margin-right: 30px;
@@ -211,6 +211,6 @@
 {
     position: absolute;
     right: 7%;
-    top:12px;
+    top:19.5px;
 }
 }

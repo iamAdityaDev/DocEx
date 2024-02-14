@@ -5,7 +5,11 @@ import "../css_files/navbar.css";
 const Navbar = () => {
   return (
     <div className="navbar">
-      <p className="docex">DocEx</p>
+      {/* <div className="combine_user"> */}
+      {/* <p className="docex">DocEx</p> */}
+      <p className="new_user">{localStorage.user_info}</p>
+      {/* </div> */}
+
       {/* <div className="nav">
         <Link to="/home" className="nav_comp">
           Home

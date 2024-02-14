@@ -1,3 +1,23 @@
+/* .combine_user
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+.new_user {
+    opacity: 0.8;
+    color:rgb(0, 119, 0);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-right: auto;
+    margin-left: 20px;
+}
+
 .navbar
 {
     height: 60px;
