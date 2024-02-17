@@ -91,6 +91,7 @@ const Notes = () => {
     deleteNote(note_id);
     getNotes();
     close_delete();
+    // getNotes();
   };
   const delete_nhi = () => {
     getNotes();

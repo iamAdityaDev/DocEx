@@ -95,9 +95,27 @@ const Landing = () => {
 
     if (json.success) {
       localStorage.setItem("token", json.authtoken);
-      navigate("/home");
 
+      const response2 = await fetch(
+        `https://doc-ex.vercel.app/api/auth/getuser`,
+        {
+          method: "POST",
+          headers: {
+            "auth-token": json.authtoken,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            docex_id: credentials.docex_id,
+            password: credentials.password,
+          }),
+        }
+      );
+      const userData = await response2.json();
+      console.log(userData);
+
+      localStorage.setItem("user_info", userData.docex_id);
       setloading(false);
+      navigate("/home");
     } else {
       setloading(false);
       alert("Invalid credentials!!");
