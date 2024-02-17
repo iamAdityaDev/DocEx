@@ -7,16 +7,17 @@
 .logout_but
 {
     cursor: pointer;
-    height: 37px;
-    width: 130px;
-    font-size: 1.1rem;
+    height: 31px;
+    width: 88px;
+    font-size: 1rem;
     position: absolute;
-    top:47px;
-    right:18px;
+    top:88px;
+    left:30px;
     border: none;
-    border-radius: 35px;
-    background-color: rgb(117, 117, 117);
-    color: white;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+    background-color: rgb(182, 222, 175);
+    color: rgb(8, 139, 26);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,14 +135,21 @@
 @media(max-width:1050px)
 {
     .logout_but
-    {
-        opacity: 0;
-    }
-    .logout_but_two
-    {
-        opacity: 1;
-        position: absolute;
-        top: 45px;
-        right: 8px;
-    }
+{
+    cursor: pointer;
+    height: 27px;
+    width: 82px;
+    font-size: 0.9rem;
+    position: absolute;
+    top:80px;
+    left:20px;
+    border: none;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+    background-color: rgb(182, 222, 175);
+    color: rgb(8, 139, 26);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 }

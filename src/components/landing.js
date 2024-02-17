@@ -8,6 +8,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailIcon from "@mui/icons-material/Mail";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import Spinner from "./Spinner";
 
 const Landing = () => {
   const [credentials, setcredentials] = useState({
@@ -20,8 +21,11 @@ const Landing = () => {
   });
   const navigate = useNavigate();
 
+  const [loading, setloading] = useState(false);
+
   const handle_submit_login = async (e) => {
     e.preventDefault();
+    setloading(true);
     const response = await fetch(`https://doc-ex.vercel.app/api/auth/login`, {
       method: "POST",
       headers: {
@@ -56,8 +60,11 @@ const Landing = () => {
 
       localStorage.setItem("user_info", userData.docex_id);
 
+      setloading(false);
       navigate("/home");
     } else {
+      setloading(false);
+      navigate("/");
       alert("Invalid credentials!!");
     }
   };
@@ -69,6 +76,7 @@ const Landing = () => {
 
   const handle_submit_signup = async (e) => {
     e.preventDefault();
+    setloading(true);
     const response = await fetch(
       `https://doc-ex.vercel.app/api/auth/createuser`,
       {
@@ -87,9 +95,11 @@ const Landing = () => {
 
     if (json.success) {
       localStorage.setItem("token", json.authtoken);
-      // alert("Yeah!!")
       navigate("/home");
+
+      setloading(false);
     } else {
+      setloading(false);
       alert("Invalid credentials!!");
     }
   };
@@ -119,6 +129,7 @@ const Landing = () => {
 
   return (
     <>
+      {loading && <Spinner />}
       <div className="parent_landing">
         <p className="logo_landing">DocEx</p>
         <p className="head_para">
@@ -130,7 +141,6 @@ const Landing = () => {
           few clicks. We've simplified the sign-in process; no personal
           information required!
         </p>
-
         <div className="body_landing">
           <div className="body_back_landing">
             <div className="log_signup">

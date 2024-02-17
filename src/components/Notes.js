@@ -12,6 +12,8 @@ const Notes = () => {
   const { notes, getNotes, editNote, deleteNote } = context;
   const navigate = useNavigate();
 
+  const [note_id, setnote_id] = useState();
+
   useEffect(() => {
     if (localStorage.getItem("token")) {
       close_delete();
@@ -61,17 +63,23 @@ const Notes = () => {
   };
 
   const delete_kar = (note) => {
+    setnote_id(note._id);
     let modal = document.getElementById("delete_modal_id");
     let back = document.getElementById("back_for_delete_note_id");
     modal.style.display = "flex";
     back.style.display = "flex";
 
-    let button = document.getElementById("abcd");
-    button.addEventListener("click", function () {
-      deleteNote(note._id);
-      getNotes();
-      close_delete();
-    });
+    // let button = document.getElementById("abcd");
+    // button.addEventListener("click", function () {
+    //   deleteNote(note._id);
+    //   getNotes();
+    //   // close_delete();
+    // });
+    // let button_cancel = document.getElementById("delete_mat_kar");
+    // button_cancel.addEventListener("click", function () {
+    //   getNotes();
+    //   // close_delete();
+    // });
   };
   const close_delete = () => {
     let modal = document.getElementById("delete_modal_id");
@@ -79,7 +87,15 @@ const Notes = () => {
     modal.style.display = "none";
     back.style.display = "none";
   };
-
+  const delete_hojao = () => {
+    deleteNote(note_id);
+    getNotes();
+    close_delete();
+  };
+  const delete_nhi = () => {
+    getNotes();
+    close_delete();
+  };
   return (
     <>
       <div id="back_for_delete_note_id" className="back_for_delete_note"></div>
@@ -89,10 +105,14 @@ const Notes = () => {
             Are you sure you want to delete the note ?
           </p>
           <div className="delete_buttons_div">
-            <button onClick={close_delete} className="cancel_delete">
+            <button
+              onClick={delete_nhi}
+              id="delete_mat_kar"
+              className="cancel_delete"
+            >
               Cancel
             </button>
-            <button id="abcd" className="delete_delete">
+            <button onClick={delete_hojao} id="abcd" className="delete_delete">
               Delete
             </button>
           </div>

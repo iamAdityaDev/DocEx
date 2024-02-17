@@ -1,0 +1,39 @@
+.spin_back {
+  z-index: 101;
+  /* height: 680px; */
+  height: 100%;
+  width: 100%;
+  background-color: rgb(238, 238, 238);
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.loading_spinner {
+  font-size: 2rem;
+  color: rgb(146, 146, 146);
+  position: relative;
+    top: 100px;
+}
+.img_spin
+{
+    position: relative;
+    left: 7px;
+    top: 50px;
+    /* background-color: red; */
+    text-align: center;
+}
+@media(max-width:1500px)
+{
+  .spin_back 
+  {
+    position: fixed;
+    top: 0;
+  }
+  .loading_spinner
+  {
+    position: relative;
+    top: 100px;
+  }
+}
