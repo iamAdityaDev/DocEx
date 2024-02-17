@@ -76,6 +76,18 @@ const Landing = () => {
 
   const handle_submit_signup = async (e) => {
     e.preventDefault();
+    if (credentials_signup.docex_id.length < 3) {
+      alert("DocEx ID must be at least 3 characters long.");
+      return; // Stop further execution
+    }
+
+    // Check if the length of password is less than 3 characters
+    if (credentials_signup.password.length < 4) {
+      alert("Password must be at least 4 characters long.");
+      return; // Stop further execution
+    }
+
+    setloading(true);
     setloading(true);
     const response = await fetch(
       `https://doc-ex.vercel.app/api/auth/createuser`,
@@ -111,14 +123,16 @@ const Landing = () => {
         }
       );
       const userData = await response2.json();
-      console.log(userData);
+      // console.log(userData);
 
       localStorage.setItem("user_info", userData.docex_id);
       setloading(false);
       navigate("/home");
     } else {
       setloading(false);
-      alert("Invalid credentials!!");
+      // console.log(json.stringify);
+      let string = json.error;
+      alert(string);
     }
   };
   const onchange_signup_credentials = (e) => {
@@ -287,6 +301,7 @@ const Landing = () => {
               name="docex_id"
               placeholder="ex. institute_note__iiitdwd.."
               required
+              minLength={3}
             />
             <p className="create_docex_id_pass_p">Create your password</p>
             <input
@@ -295,6 +310,7 @@ const Landing = () => {
               type="password"
               name="password"
               required
+              minLength={4}
             ></input>
             <button onClick={handle_submit_signup} className="goto_signup">
               Create
